@@ -8,6 +8,8 @@
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
+@import url('../../node_modules/accordion-js/dist/accordion.min.css');
+@import url('../../node_modules/swiper/swiper-bundle.min.css');
 
 /* Sections style */
 @import url('./header.css');
