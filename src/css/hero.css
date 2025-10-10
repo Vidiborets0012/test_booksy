@@ -33,8 +33,9 @@
   flex-direction: column;
   gap: 16px;
   position: absolute;
-  top: 80px;
-  left: 16px;
+  top: 36%;
+  left: 4%;
+  max-width: 80%;
   color: #fff;
 }
 
