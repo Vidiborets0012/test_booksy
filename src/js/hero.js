@@ -1,4 +1,5 @@
 import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 
 const swiper = new Swiper('.hero-slider', {
   slidesPerView: 1,
