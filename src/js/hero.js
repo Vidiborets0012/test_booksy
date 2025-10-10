@@ -8,7 +8,7 @@ const swiper = new Swiper('.hero-slider', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.hero-button-next',
+    prevEl: '.hero-button-prev',
   },
 });
