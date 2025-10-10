@@ -3,4 +3,4 @@ function Ze(e){return e!==null&&typeof e=="object"&&"constructor"in e&&e.constru
         rotateZ(${l.rotate?c?-I:I:0}deg)
         scale(${P})
       `;if(l.slideShadows){let z=r.querySelector(".swiper-slide-shadow");z||(z=pe("cards",r)),z&&(z.style.opacity=Math.min(Math.max((Math.abs(h)-.5)/.5,0),1))}r.style.zIndex=-Math.abs(Math.round(o))+n.length;const T=xe(l,r);T.style.transform=E}},setTransition:n=>{const d=e.slides.map(c=>ce(c));d.forEach(c=>{c.style.transitionDuration=`${n}ms`,c.querySelectorAll(".swiper-slide-shadow").forEach(l=>{l.style.transitionDuration=`${n}ms`})}),Oe({swiper:e,duration:n,transformElements:d})},perspective:()=>!0,overwriteParams:()=>({_loopSwapReset:!1,watchSlidesProgress:!0,loopAdditionalSlides:e.params.cardsEffect.rotate?3:2,centeredSlides:!0,virtualTranslate:!e.params.cssMode})})}const ts=[Pa,La,Ia,Aa,Oa,$a,Da,ka,Ga,Ha,Ba,Xa,Ya,Ra,Va,Na,Ua,Ka,Za,Qa,Ja,wa,es];J.use(ts);export{J as S};
-//# sourceMappingURL=vendor-CY0C0wvy.js.map
+//# sourceMappingURL=vendor-6NUp39Vb.js.map
