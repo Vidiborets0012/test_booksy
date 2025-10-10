@@ -97,6 +97,9 @@
   border: 1px solid rgba(11, 5, 0, 0.15);
   background: #e15d05;
   opacity: 0.2;
+
+  pointer-events: none;
+  cursor: default;
 }
 
 @media screen and (min-width: 768px) {
