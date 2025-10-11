@@ -1,5 +1,4 @@
 .hero-section {
-  padding-top: 50px;
   padding-bottom: 32px;
 }
 
@@ -54,6 +53,21 @@
   background: #e15d05;
   border: 0.52px solid #e15d05;
   border-radius: 2px;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.hero-slider-link:hover,
+.hero-slider-link:focus-visible {
+  background-color: #0b0500;
+  border-color: #0b0500;
+  color: #fff;
+}
+
+.hero-slider-link:active {
+  background-color: #b44a04;
+  border-color: #b44a04;
+  color: #fff;
 }
 
 .hero-slider-buttons {
@@ -90,7 +104,7 @@
 
 .hero-slider-button:focus {
   color: #fff;
-  background-color: #5a2502;
+  background-color: #fceee6;
 }
 
 .swiper-button-disabled {
@@ -106,6 +120,7 @@
 @media screen and (min-width: 768px) {
   .hero-inner {
     position: relative;
+    padding-bottom: 24px;
   }
 
   .hero-slider {
@@ -150,6 +165,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .hero-inner {
+    padding-bottom: 8px;
+  }
+
   .hero-slider {
     padding-bottom: 7px;
   }

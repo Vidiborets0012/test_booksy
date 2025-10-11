@@ -36,26 +36,3 @@ if (nextButton) {
     handleButtonClick(this);
   });
 }
-
-/*
-document.addEventListener('keydown', function (event) {
-  const focusedElement = document.activeElement;
-
-  const isHeroSliderFocused =
-    focusedElement && focusedElement.closest('.hero-slider');
-
-  if (!isHeroSliderFocused) {
-    return;
-  }
-
-  switch (event.key) {
-    case 'ArrowLeft':
-      swiperHero.slidePrev();
-      break;
-    case 'ArrowRight':
-      swiperHero.slideNext();
-      break;
-  }
-});
-
-*/
