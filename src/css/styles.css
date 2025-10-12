@@ -12,6 +12,7 @@
 /* @import url('../../node_modules/swiper/swiper-bundle.min.css'); */
 
 /* Sections style */
+@import url('./slider.css');
 @import url('./header.css');
 @import url('./hero.css');
 @import url('./books.css');

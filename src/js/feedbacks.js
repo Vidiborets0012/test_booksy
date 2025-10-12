@@ -1,7 +1,6 @@
-import Swiper from 'swiper';
-import { Navigation, Pagination, Keyboard, Mousewheel } from 'swiper/modules';
+import Swiper from 'swiper/bundle';
 
-const swiper = new Swiper('.swiper-div', {
+const feedbackSlider = new Swiper('.swiper-div', {
   // modules: [Navigation, Pagination, Keyboard, Mousewheel],
   loop: false,
   spaceBetween: 24,
@@ -40,16 +39,16 @@ const swiper = new Swiper('.swiper-div', {
   },
 });
 
-// const swiperUL = document.querySelector('.swiper-wrapper');
+const swiperUL = document.querySelector('.swiper-wrapper');
 
 // swiperUL.addEventListener('keydown', event => {
 //   if (event.key === 'Tab') {
 //     event.preventDefault();
 
 //     if (event.shiftKey) {
-//       swiperDiv.slidePrev();
+//       swiper.slidePrev();
 //     } else {
-//       swiperDiv.slideNext();
+//       swiper.slideNext();
 //     }
 //   }
 // });
