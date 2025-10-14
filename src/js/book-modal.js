@@ -50,7 +50,7 @@ export async function fetchBookId(id) {
 }
 
 function renderBook(book) {
-  bookImgContainer.innerHTML = `<img src="${book.book_image}" alt="${book.title}" class="book-img" />`;
+  bookImgContainer.innerHTML = `<img src="${book.book_image}" alt="${book.title}" class="book-img" loading="lazy"/>`;
   bookModalInfo.innerHTML = `
   <h2 class="book-title">${book.title}</h2>
   <p class="book-author">${book.author}</p>
