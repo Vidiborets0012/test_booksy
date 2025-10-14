@@ -1,6 +1,15 @@
-import Swiper from 'swiper/bundle';
+// import Swiper from 'swiper/bundle';
+
+// import Swiper, { Navigation, Pagination, Mousewheel } from 'swiper/modules';
+
+import { Swiper } from 'swiper';
+import { Navigation, Pagination, Mousewheel } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const feedbackSlider = new Swiper('.swiper-div', {
+  modules: [Navigation, Pagination, Mousewheel],
   loop: false,
   spaceBetween: 24,
 

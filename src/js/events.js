@@ -1,8 +1,17 @@
-import Swiper from 'swiper/bundle';
+// import Swiper from 'swiper/bundle';
+
 import { openBtnContactModal } from './contact-modal';
 
+// import Swiper, { Navigation, Pagination } from 'swiper/modules';
+
+import { Swiper } from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const eventsSlider = new Swiper('.events-swiper', {
+  modules: [Navigation, Pagination],
   spaceBetween: 24,
   pagination: {
     el: '.swiper-pagination',
@@ -26,27 +35,24 @@ const eventsSlider = new Swiper('.events-swiper', {
     },
     1440: {
       slidesPerView: 3,
-    
     },
   },
 });
 
-
 //  JS-code for section Events Booksy
 
 const eventList = document.querySelector('.events-list');
-eventList.addEventListener("click", (event) => {
-  const openBtn = event.target.closest(".event-btn");
+eventList.addEventListener('click', event => {
+  const openBtn = event.target.closest('.event-btn');
   if (!openBtn) {
     return;
   }
-  const eventItem = openBtn.closest(".event-item");
+  const eventItem = openBtn.closest('.event-item');
   if (!eventItem) {
     return;
   }
-  const eventTitle = eventItem.querySelector(".event-subtitle").textContent;
+  const eventTitle = eventItem.querySelector('.event-subtitle').textContent;
   // subtitleModal.textContent = eventTitle;
 
   openBtnContactModal(eventTitle);
 });
-

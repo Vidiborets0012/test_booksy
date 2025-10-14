@@ -1,7 +1,15 @@
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+// import Swiper from 'swiper/bundle';
+// import 'swiper/css/bundle';
+
+// import Swiper, { Navigation, Keyboard } from 'swiper/modules';
+
+import { Swiper } from 'swiper';
+import { Navigation, Keyboard } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const heroSlider = new Swiper('.hero-slider', {
+  modules: [Navigation, Keyboard],
   slidesPerView: 1,
   slidesPerGroup: 1,
 

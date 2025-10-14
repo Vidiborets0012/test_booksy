@@ -11,6 +11,19 @@
 @import url('./container.css');
 
 /* Sections style */
+@import 'accordion-js/dist/accordion.min.css';
+
+/* У вашому styles.css */
+/* @import url('./node_modules/swiper/swiper.min.css'); /* Базові стилі */
+/*@import url('node_modules/swiper/modules/navigation/navigation.min.css');  Для Navigation */
+/* @import url('../../../node_modules/swiper/modules/pagination/pagination.min.css'); Для Pagination */
+/* @import url('../../node_modules/swiper/swiper-bundle.min.css'); */
+/* @import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination'; */
+/* @import url('/swiper/swiper.min.css');
+@import url('./swiper/modules/navigation/navigation.min.css');
+@import url('./swiper/modules/pagination/pagination.min.css'); */
 @import url('./slider.css');
 @import url('./header.css');
 @import url('./hero.css');
