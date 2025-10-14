@@ -5,12 +5,6 @@
     <link rel="icon" type="image/svg+xml" href="/test_booksy/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booksy</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
-      rel="stylesheet"
-    /> -->
 
     <link
       rel="stylesheet"
@@ -20,12 +14,98 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" crossorigin src="/test_booksy/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/test_booksy/assets/vendor-6NUp39Vb.js">
-    <link rel="stylesheet" crossorigin href="/test_booksy/assets/vendor-C3Bycd5f.css">
-    <link rel="stylesheet" crossorigin href="/test_booksy/assets/index-B97_4coI.css">
+    <link rel="modulepreload" crossorigin href="/test_booksy/assets/vendor-DHN7Kf4x.js">
+    <link rel="stylesheet" crossorigin href="/test_booksy/assets/vendor-FKb9hsNq.css">
+    <link rel="stylesheet" crossorigin href="/test_booksy/assets/index-jFyXHjbd.css">
   </head>
   <body>
-    <header class="header"></header>
+    <header class="header">
+  <header class="header" id="home">
+    <div class="container header-container">
+      <nav class="header-nav">
+        <a class="header-logo" href="./index.html">
+          <img
+            class="icon-logo"
+            src="/test_booksy/assets/company-logo-CkqJT8ZD.svg"
+            alt="Логотип сайту"
+          />
+        </a>
+
+        <ul class="header-list">
+          <li class="header-item">
+            <a class="header-link" href="#home">Home</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link" href="#books">Books</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link" href="#feedbacks">Feedbacks</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link" href="#events">Events</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link" href="#location">Location</a>
+          </li>
+        </ul>
+      </nav>
+
+      <button class="menu-btn open-menu" type="button" aria-label="Open menu">
+        <svg class="icon-burger" width="24" height="24">
+          <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-menu-alt-right"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="mob-menu">
+      <div class="container mob-menu-div">
+        <div class="mob-menu-logo">
+          <a class="header-logo" href="./index.html">
+            <img
+              class="icon-logo"
+              src="/test_booksy/assets/company-logo-CkqJT8ZD.svg"
+              alt="Логотип сайту"
+            />
+          </a>
+          <button
+            class="btn-close close-menu"
+            type="button"
+            aria-label="Close menu"
+          >
+            <svg class="icon-close" width="12" height="12">
+              <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="mob-menu-nav">
+          <ul class="mob-menu-list">
+            <li class="mob-header-item">
+              <a class="header-link-menu menu-link" href="#home">Home</a>
+            </li>
+            <li class="mob-header-item">
+              <a class="header-link-menu menu-link" href="#books">Books</a>
+            </li>
+            <li class="mob-header-item">
+              <a class="header-link-menu menu-link" href="#feedbacks"
+                >Feedbacks</a
+              >
+            </li>
+            <li class="mob-header-item">
+              <a class="header-link-menu menu-link" href="#events">Events</a>
+            </li>
+            <li class="mob-header-item">
+              <a class="header-link-menu menu-link" href="#location"
+                >Location</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+</header>
+
 
     <main>
       <section class="hero hero-section container">
@@ -266,14 +346,215 @@
   </div>
 </section>
 
+      <section id="books">
+  <div class="container books-container">
+    <h2 class="books-hidden">Trending books</h2>
+
+    <div class="books-header-container">
+      <div class="books-header">
+        <h3 class="books-title">Books</h3>
+        <p class="books-shown-quantity"></p>
+      </div>
+
+      <div class="categories-dropdown-wrapper">
+        <button type="button" class="categories-dropdown-btn">
+          <span class="categories-dropdown-text">Categories</span>
+          <svg class="categories-dropdown-icon">
+            <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-lower-corner"></use>
+          </svg>
+        </button>
+        <ul
+          class="categories-dropdown-list books-hidden"
+          id="books-categories-dropdown-list"
+        ></ul>
+      </div>
+
+      <div class="desktop-categories-wrapper">
+        <ul
+          class="books-categories-desktop"
+          id="books-categories-desktop-list"
+        ></ul>
+      </div>
+    </div>
+
+    <div class="books-main-content">
+      <div>
+        <ul class="books-list"></ul>
+      </div>
+      <button class="books-load-more books-hidden" type="button">
+        Show More
+      </button>
+    </div>
+  </div>
+</section>
+
+      <section class="feedbacks container" tabindex="0" id="feedbacks">
+  <div class="feedbacks-div-title">
+    <h2 class="feedbacks-title-main">Customer Feedbacks</h2>
+    <p class="feedbacks-title-litle">
+      See what our readers are saying about us!
+    </p>
+  </div>
+  <div class="swiper swiper-div">
+    <ul class="swiper-wrapper ul-swiper-wrapper">
+      <!-- Slides -->
+      <!-- 1   -->
+      <li class="swiper-slide feedbacks-item">
+        <div class="container-comments">
+          <p class="feedbacks-comments">
+            Great selection, fast delivery, and beautifully packaged books. My
+            go-to store for weekend reads!
+          </p>
+          <div class="user-info">
+            <img
+              class="feedbacks-comments-img"
+              src="/test_booksy/assets/face1-06J1Z4Ta.jpg"
+              alt="face"
+              srcset="/test_booksy/assets/face1-06J1Z4Ta.jpg 1x, /test_booksy/assets/face1_2%D1%85-Cceu56Kv.jpg 2x"
+            />
+            <div class="user-details">
+              <h4 class="feedbacks-comments-name">Ethan Brooks</h4>
+              <p class="feedbacks-comments-description">Book Lover, Reader</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- 2   -->
+      <li class="swiper-slide feedbacks-item">
+        <p class="feedbacks-comments">
+          Always a pleasure ordering here! The books arrive quickly and are
+          always in perfect condition. A reader&apos;s dream!
+        </p>
+        <div class="user-info">
+          <img
+            class="feedbacks-comments-img"
+            src="/test_booksy/assets/face2-BQ6_rEld.jpg"
+            alt="face"
+            srcset="/test_booksy/assets/face2-BQ6_rEld.jpg 1x, /test_booksy/assets/face2_2%D1%85-Cjzsr_xI.jpg 2x"
+          />
+          <div class="user-details">
+            <h4 class="feedbacks-comments-name">Benjamin Scott</h4>
+            <p class="feedbacks-comments-description">Story Seeker, Reader</p>
+          </div>
+        </div>
+      </li>
+      <!-- 3   -->
+      <li class="swiper-slide feedbacks-item">
+        <div class="container-comments">
+          <p class="feedbacks-comments">
+            Excellent service and amazing collection. I always find something
+            new and exciting to read. Highly recommended!
+          </p>
+          <div class="user-info">
+            <img
+              class="feedbacks-comments-img"
+              src="/test_booksy/assets/face3-CobtEUpx.jpg"
+              alt="face"
+              srcset="/test_booksy/assets/face3-CobtEUpx.jpg 1x, /test_booksy/assets/face3_2%D1%85-FMeHVz4W.jpg 2x"
+            />
+            <div class="user-details">
+              <h4 class="feedbacks-comments-name">Lucas Reed</h4>
+              <p class="feedbacks-comments-description">Word Whisperer</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- 4   -->
+      <li class="swiper-slide feedbacks-item">
+        <div class="container-comments">
+          <p class="feedbacks-comments">
+            Fantastic store! The packaging is so thoughtful, and every order
+            feels like opening a gift.
+          </p>
+          <div class="user-info">
+            <img
+              class="feedbacks-comments-img"
+              src="/test_booksy/assets/face4-DEMS7uMd.jpg"
+              alt="face"
+              srcset="/test_booksy/assets/face4-DEMS7uMd.jpg 1x, /test_booksy/assets/face4_2%D1%85-D43OKLTZ.jpg 2x"
+            />
+            <div class="user-details">
+              <h4 class="feedbacks-comments-name">Noah Bennett</h4>
+              <p class="feedbacks-comments-description">Literary Soul</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- 5   -->
+      <li class="swiper-slide feedbacks-item">
+        <div class="container-comments">
+          <p class="feedbacks-comments">
+            Love this bookstore! Great prices, fast shipping, and the books
+            always look brand new.
+          </p>
+          <div class="user-info">
+            <img
+              class="feedbacks-comments-img"
+              src="/test_booksy/assets/face5-CDJkOvWe.jpg"
+              alt="face"
+              srcset="/test_booksy/assets/face5-CDJkOvWe.jpg 1x, /test_booksy/assets/face5_2%D1%85-BPkPLU3t.jpg 2x"
+            />
+            <div class="user-details">
+              <h4 class="feedbacks-comments-name">Daniel Carter</h4>
+              <p class="feedbacks-comments-description">Editor, BookMag</p>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!--6   -->
+      <li class="swiper-slide feedbacks-item">
+        <div class="container-comments">
+          <p class="feedbacks-comments">
+            Impressive quality and care. My orders arrive on time and
+            beautifully packed every single time.
+          </p>
+          <div class="user-info">
+            <img
+              class="feedbacks-comments-img"
+              src="/test_booksy/assets/face6-Bp92Eb3q.jpg"
+              alt="face"
+              srcset="/test_booksy/assets/face6-Bp92Eb3q.jpg 1x, /test_booksy/assets/face6_2%D1%85-BTtIFpxA.jpg 2x"
+            />
+            <div class="user-details">
+              <h4 class="feedbacks-comments-name">Henry Adams</h4>
+              <p class="feedbacks-comments-description">Editor</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="slider-controls">
+      <div class="swiper-pagination slider-pagination"></div>
+      <div class="slider-buttons-box">
+        <div
+          class="slider-button feedbacks-button-prev"
+          aria-label="previous slide"
+        >
+          <svg class="icon-arrow-left arrow" width="14" height="14">
+            <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-left-arrow"></use>
+          </svg>
+        </div>
+        <div
+          class="slider-button feedbacks-button-next"
+          aria-label="next slide"
+        >
+          <svg class="icon-arrow-right arrow" width="14" height="14">
+            <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-right-arrow"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section class="events" id="events">
   <div class="container">
     <p class="events-label">Events</p>
     <h2 class="events-title">Upcoming Events at Booksy</h2>
     <p class="events-text">
-      Discover readings, workshops, and bookish gatherings — online and offline.
-      Everyone's welcome.
+      Discover readings, workshops, and bookish gatherings — online<br />and
+      offline. Everyone's welcome.
     </p>
 
     <!-- Swiper -->
@@ -283,11 +564,11 @@
           <img
             class="events-image"
             src="/img/events/img-1x.jpg.jpg"
-            srcset="/img/events/img-1.jpg.jpg 1x, /img/events/img-1.jpg@2x.jpg 2x"
+            srcset="/test_booksy/assets/img-1.jpg-BEBd_sne.jpg 1x, /test_booksy/assets/img-1.jpg@2x-BUnADBvM.jpg 2x"
             alt="Cozy Book Club — The Midnight Library"
           />
 
-          <div class="event-info-wrraper">
+          <div class="event-info-wrapper">
             <div class="events-info">
               <h3 class="event-subtitle">
                 Cozy Book Club — "The Midnight Library"
@@ -311,11 +592,11 @@
           <img
             class="events-image"
             src="/img/events/img-2.jpg"
-            srcset="/img/events/img-2.jpg.jpg 1x, /img/events/img-2.jpg@2x.jpg 2x"
+            srcset="/test_booksy/assets/img-2.jpg-DdqpE5pW.jpg 1x, /test_booksy/assets/img-2.jpg@2x-oLMr7taD.jpg 2x"
             alt="Book Cover Design Workshop"
           />
 
-          <div class="event-info-wrraper">
+          <div class="event-info-wrapper">
             <div class="events-info">
               <h3 class="event-subtitle">Book Cover Design Workshop</h3>
               <p class="event-format">Online | June 12, 7:00 PM</p>
@@ -337,11 +618,11 @@
           <img
             class="events-image"
             src="/img/events/img-3.jpg"
-            srcset="/img/events/img-3.jpg.jpg 1x, /img/events/img-3.jpg@2x.jpg 2x"
+            srcset="/test_booksy/assets/img-3.jpg-BzBkSIJx.jpg 1x, /test_booksy/assets/img-3.jpg@2x-RAlBsz40.jpg 2x"
             alt="Children's Story Hour"
           />
 
-          <div class="event-info-wrraper">
+          <div class="event-info-wrapper">
             <div class="events-info">
               <h3 class="event-subtitle">Children's Story Hour</h3>
               <p class="event-format">In-store | June 15, 11:00 AM</p>
@@ -381,204 +662,306 @@
   </div>
 </section>
 
-
-      <section class="feedbacks container" id="feedbacks">
-  <!-- <div class="container"> -->
-  <div class="feedbacks-div-title">
-    <h2 class="feedbacks-title-main">Customer Feedbacks</h2>
-    <p class="feedbacks-title-litle">
-      See what our readers are saying about us!
-    </p>
-  </div>
-  <div class="swiper swiper-div">
-    <!-- Additional required wrapper -->
-    <ul class="swiper-wrapper ul-swiper-wrapper" tabindex="0">
-      <!-- Slides -->
-      <!-- 1   -->
-      <li class="swiper-slide feedbacks-item">
-        <div class="container-comments">
-          <p class="feedbacks-comments">
-            Great selection, fast delivery, and beautifully packaged books. My
-            go-to store for weekend reads!
-          </p>
-          <div class="user-info">
-            <img
-              class="feedbacks-comments-img"
-              src="/img/feedbacks/face1.jpg"
-              alt="face"
-              srcset="/img/feedbacks/face1.jpg 1x, /img/feedbacks/face1_2х.jpg 2x"
-            />
-            <div class="user-details">
-              <h4 class="feedbacks-comments-name">Ethan Brooks</h4>
-              <p class="feedbacks-comments-description">Book Lover, Reader</p>
-            </div>
-          </div>
-        </div>
-      </li>
-      <!-- 2   -->
-      <li class="swiper-slide feedbacks-item">
-        <p class="feedbacks-comments">
-          Always a pleasure ordering here! The books arrive quickly and are
-          always in perfect condition. A reader&apos;s dream!
-        </p>
-        <div class="user-info">
-          <img
-            class="feedbacks-comments-img"
-            src="/img/feedbacks/face2.jpg"
-            alt="face"
-            srcset="/img/feedbacks/face2.jpg 1x, /img/feedbacks/face2_2х.jpg 2x"
-          />
-          <div class="user-details">
-            <h4 class="feedbacks-comments-name">Benjamin Scott</h4>
-            <p class="feedbacks-comments-description">Story Seeker, Reader</p>
-          </div>
-        </div>
-      </li>
-      <!-- 3   -->
-      <li class="swiper-slide feedbacks-item">
-        <div class="container-comments">
-          <p class="feedbacks-comments">
-            Excellent service and amazing collection. I always find something
-            new and exciting to read. Highly recommended!
-          </p>
-          <div class="user-info">
-            <img
-              class="feedbacks-comments-img"
-              src="/img/feedbacks/face3.jpg"
-              alt="face"
-              srcset="/img/feedbacks/face3.jpg 1x, /img/feedbacks/face3_2х.jpg 2x"
-            />
-            <div class="user-details">
-              <h4 class="feedbacks-comments-name">Lucas Reed</h4>
-              <p class="feedbacks-comments-description">Word Whisperer</p>
-            </div>
-          </div>
-        </div>
-      </li>
-      <!-- 4   -->
-      <li class="swiper-slide feedbacks-item">
-        <div class="container-comments">
-          <p class="feedbacks-comments">
-            Fantastic store! The packaging is so thoughtful, and every order
-            feels like opening a gift.
-          </p>
-          <div class="user-info">
-            <img
-              class="feedbacks-comments-img"
-              src="/img/feedbacks/face4.jpg"
-              alt="face"
-              srcset="/img/feedbacks/face4.jpg 1x, /img/feedbacks/face4_2х.jpg 2x"
-            />
-            <div class="user-details">
-              <h4 class="feedbacks-comments-name">Noah Bennett</h4>
-              <p class="feedbacks-comments-description">Literary Soul</p>
-            </div>
-          </div>
-        </div>
-      </li>
-      <!-- 5   -->
-      <li class="swiper-slide feedbacks-item">
-        <div class="container-comments">
-          <p class="feedbacks-comments">
-            Love this bookstore! Great prices, fast shipping, and the books
-            always look brand new.
-          </p>
-          <div class="user-info">
-            <img
-              class="feedbacks-comments-img"
-              src="/img/feedbacks/face5.jpg"
-              alt="face"
-              srcset="/img/feedbacks/face5.jpg 1x, /img/feedbacks/face5_2х.jpg 2x"
-            />
-            <div class="user-details">
-              <h4 class="feedbacks-comments-name">Daniel Carter</h4>
-              <p class="feedbacks-comments-description">Editor, BookMag</p>
-            </div>
-          </div>
-        </div>
-      </li>
-      <!--6   -->
-      <li class="swiper-slide feedbacks-item">
-        <div class="container-comments">
-          <p class="feedbacks-comments">
-            Impressive quality and care. My orders arrive on time and
-            beautifully packed every single time.
-          </p>
-          <div class="user-info">
-            <img
-              class="feedbacks-comments-img"
-              src="/img/feedbacks/face6.jpg"
-              alt="face"
-              srcset="/img/feedbacks/face6.jpg 1x, /img/feedbacks/face6_2х.jpg 2x"
-            />
-            <div class="user-details">
-              <h4 class="feedbacks-comments-name">Henry Adams</h4>
-              <p class="feedbacks-comments-description">Editor</p>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
-    <!-- <div class="pagination-button">
-        
-        <div class="swiper-pagination pagination"></div>
-        <div class="conteiner-button-svg">
-          
-          <div class="swiper-button-prev button-svg">
-            <svg class="icon-arrow" width="14" height="14">
-              <use href="/img/sprite-opt.svg#icon-left-arrow"></use>
-            </svg>
-          </div>
-          <div class="swiper-button-next button-svg">
-            <svg class="icon-arrow" width="14" height="14">
-              <use href="/img/sprite-opt.svg#icon-right-arrow"></use>
-            </svg>
-          </div>
-        </div>
-      </div> -->
-
-    <div class="slider-controls">
-      <div class="swiper-pagination slider-pagination"></div>
-      <div class="slider-buttons-box">
-        <div
-          class="slider-button feedbacks-button-prev"
-          aria-label="previous slide"
-        >
-          <svg class="icon-arrow-left" width="14" height="14">
-            <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-left-arrow"></use>
-          </svg>
-        </div>
-        <div
-          class="slider-button feedbacks-button-next"
-          aria-label="next slide"
-        >
-          <svg class="icon-arrow-right" width="14" height="14">
-            <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-right-arrow"></use>
-          </svg>
-        </div>
-      </div>
+      <section class="article" id="article">
+  <div class="container article-container">
+    <div class="article-text-container">
+      <h2 class="article-title">
+        Welcome to Booksy - your cozy corner for handpicked reads.
+      </h2>
+      <p class="article-text">
+        We believe books are more than just stories — they&apos;re companions,
+        doorways, and memories. Whether you&apos;re chasing adventures or quiet
+        moments, we&apos;re here to help you find your next favorite book.
+      </p>
     </div>
-    <!-- <div class="swiper-pagination pagination"></div>
-    <div class="feedbacks-slider-buttons">
-      <div
-        class="slider-button feedbacks-button-prev"
-        aria-label="previous slide"
-      >
-        <svg class="icon-arrow-left" width="14" height="14">
-          <use href="/img/sprite-opt.svg#icon-left-arrow"></use>
-        </svg>
-      </div>
-      <div class="slider-button feedbacks-button-next" aria-label="next slide">
-        <svg class="icon-arrow-right" width="14" height="14">
-          <use href="/img/sprite-opt.svg#icon-right-arrow"></use>
-        </svg>
-      </div>
-    </div> -->
+    <img
+      class="article-img"
+      src="/test_booksy/assets/article-bookstore-interior1x-COUvtOTo.jpg"
+      srcset="/test_booksy/assets/article-bookstore-interior1x-COUvtOTo.jpg 1x, /test_booksy/assets/article_bookstore-interior2x-2PWlOAzK.jpg 2x"
+      alt="bookstore interior"
+    />
   </div>
-  <!-- </div> -->
 </section>
 
+      <section class="location" id="location">
+  <div class="container location-container">
+    <div class="location-container-text">
+      <p class="location-name">Location</p>
+      <h2 class="location-title">How to find us</h2>
+      <p class="location-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique.
+      </p>
+    </div>
+    <address class="location-address-list">
+      <ul class="location-list">
+        <li class="location-item">
+          <svg class="location-svg" width="24" height="24">
+            <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-message"></use>
+          </svg>
+          <div class="location-info">
+            <p class="location-item-text">Email</p>
+            <a class="location-address" href="mailto:hello@booksy.com"
+              >hello@booksy.com</a
+            >
+          </div>
+        </li>
+        <li class="location-item">
+          <svg class="location-svg" width="24" height="24">
+            <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-phone"></use>
+          </svg>
+          <div class="location-info">
+            <p class="location-item-text">Phone</p>
+            <a class="location-address" href="tel:+61 (241) 304-3012"
+              >+61 (241) 304-3012</a
+            >
+          </div>
+        </li>
+        <li class="location-item">
+          <svg class="location-svg" width="24" height="24">
+            <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-location"></use>
+          </svg>
+          <div class="location-info">
+            <p class="location-item-text">Office</p>
+            <a
+              class="location-info-text"
+              href="https://maps.app.goo.gl/TtaGXphsyR3YnvsR6"
+              target="_blank"
+              rel="noopener noreferrer"
+              >123 Books St, Sydney NSW 2000 AU</a
+            >
+          </div>
+        </li>
+      </ul>
+    </address>
+  </div>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6625.541395959687!2d151.19806887770994!3d-33.869799900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3fa7449bc1%3A0xb5b4043ea960a5fc!2sDymocks%20Sydney!5e0!3m2!1sru!2sua!4v1760052059960!5m2!1sru!2sua"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</section>
+
+      <div class="backdrop-book-modal window-is-invisible">
+  <div class="book-modal">
+    <button type="button" class="book-modal-close-btn">
+      <svg class="modal-close-btn-icon" width="16" height="16">
+        <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <div class="book-img-container"></div>
+
+    <!----- book container ----->
+
+    <div class="book-container">
+      <div class="book-modal-info"></div>
+
+      <!----- form quantity book ----->
+
+      <form action="#" class="form-quantity">
+        <div class="quantity">
+          <button type="button" class="neg-book-btn">-</button>
+          <input
+            type="number"
+            name="quantity"
+            id="quantity"
+            value="1"
+            min="1"
+            readonly
+            class="quantity-book"
+          />
+          <button type="button" class="add-book-btn">+</button>
+        </div>
+        <div class="move-book-btns">
+          <button type="button" class="add-to-cart-btn">Add To Cart</button>
+          <button type="submit" class="buy-now-btn">Buy Now</button>
+        </div>
+      </form>
+
+      <!----- accordion container book info ----->
+
+      <ul class="accordion-container book-modal-list">
+        <li class="ac book-modal-item">
+          <div class="ac-header">
+            <h4>
+              <button class="ac-trigger book-modal-title" aria-expanded="false">
+                Details
+                <svg class="btn-corner" width="24" height="24">
+                  <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-upper-corner"></use>
+                </svg>
+              </button>
+            </h4>
+          </div>
+          <div class="ac-panel">
+            <p class="book-modal-text">
+              I Will Find You is a gripping thriller by the master of suspense,
+              Harlan Coben. The story follows David Burroughs, a former prisoner
+              wrongfully convicted of murdering his own son. When he discovers a
+              clue suggesting his son might still be alive, David escapes from
+              prison to uncover the truth. Fast-paced, emotional, and full of
+              unexpected twists — this novel will keep you hooked until the very
+              last page.
+            </p>
+          </div>
+        </li>
+        <li class="ac book-modal-item">
+          <div class="ac-header">
+            <h4>
+              <button class="ac-trigger book-modal-title" aria-expanded="false">
+                Shipping
+                <svg class="btn-corner" width="24" height="24">
+                  <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-upper-corner"></use>
+                </svg>
+              </button>
+            </h4>
+          </div>
+          <div class="ac-panel">
+            <p class="book-modal-text">
+              We ship across the United States within 2-5 business days. All
+              orders are processed through USPS or a reliable courier service.
+              Enjoy free standard shipping on orders over $50.
+            </p>
+          </div>
+        </li>
+        <li class="ac book-modal-item">
+          <div class="ac-header">
+            <h4>
+              <button class="ac-trigger book-modal-title" aria-expanded="false">
+                Returns
+                <svg class="btn-corner" width="24" height="24">
+                  <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-upper-corner"></use>
+                </svg>
+              </button>
+            </h4>
+          </div>
+          <div class="ac-panel">
+            <p class="book-modal-text">
+              You can return an item within 14 days of receiving your order,
+              provided it hasn't been used and is in its original condition. To
+              start a return, please contact our support team — we'll guide you
+              through the process quickly and hassle-free.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+      <!-- @Denys Kratyk -->
+
+<div class="backdrop-contact-modal window-is-invisible">
+  <div class="contact-modal">
+    <button type="button" class="modal-close-btn">
+      <svg class="modal-close-btn-icon" width="16" height="16">
+        <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-cross"></use>
+      </svg>
+    </button>
+    <h2 class="contact-modal-title">Register</h2>
+    <p class="contact-modal-text">Cozy Book Club — "The Midnight Library"</p>
+    <form action="#" class="contact-modal-form">
+      <div class="contact-modal-field">
+        <label for="user-name" class="modal-label">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="user-name"
+          class="modal-input"
+          placeholder="Anna"
+          required
+          maxlength="60"
+        />
+        <p class="text-invalid">The field is up to 60 characters long!</p>
+      </div>
+      <div class="contact-modal-field">
+        <label for="user-email" class="modal-label">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="user-email"
+          class="modal-input"
+          placeholder="hello@booksy.com"
+          required
+        />
+        <p class="text-invalid">Invalid email address format!</p>
+      </div>
+      <div class="contact-modal-field">
+        <label for="user-message" class="modal-label">Message</label>
+        <textarea
+          name="message"
+          id="user-message"
+          class="modal-input modal-textarea"
+          placeholder="Type your message..."
+          maxlength="500"
+        ></textarea>
+        <p class="text-invalid">
+          The maximum message length is 500 characters!
+        </p>
+      </div>
+      <button type="submit" class="contact-submit-btn">Register</button>
+    </form>
+  </div>
+</div>
+
     </main>
+
+    <footer class="footer">
+  <footer class="footer">
+    <div class="footer-container container">
+      <div class="footer-main">
+        <div class="footer-nav">
+          <a href="./index.html" class="footer-logo"
+            ><img
+              src="/test_booksy/assets/company-logo-CkqJT8ZD.svg"
+              alt="booksy-logo"
+              class="footer-logo-image"
+          /></a>
+          <ul class="footer-list">
+            <li class="footer-list-item">
+              <a class="footer-anchor-link" href="#home">Home</a>
+            </li>
+            <li class="footer-list-item">
+              <a class="footer-anchor-link" href="#books">Books</a>
+            </li>
+            <li class="footer-list-item">
+              <a class="footer-anchor-link" href="#feedbacks">Feedback</a>
+            </li>
+            <li class="footer-list-item">
+              <a class="footer-anchor-link" href="#location">Location</a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="footer-form" id="formFooter" novalidate>
+          <p class="footer-form-join">Join</p>
+          <div class="footer-form-container">
+            <input
+              type="email"
+              class="footer-input footer-item"
+              id="footerMail"
+              name="email"
+              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              placeholder="Enter your email"
+              required
+            />
+
+            <button type="submit" class="footer-btn">Sign up</button>
+          </div>
+
+          <p class="footer-form-text">* Required field</p>
+        </form>
+      </div>
+      <div class="copyrigth-content">
+        <p class="footer-copyrigth-text">
+          &copy; 2025 Booksy. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+</footer>
+
 
   </body>
 </html>
