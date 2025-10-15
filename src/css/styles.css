@@ -11,7 +11,7 @@
 @import url('./container.css');
 
 /* Sections style */
-@import 'accordion-js/dist/accordion.min.css';
+/* @import 'accordion-js/dist/accordion.min.css'; */
 
 @import url('./slider.css');
 @import url('./header.css');
