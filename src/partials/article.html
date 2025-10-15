@@ -10,7 +10,65 @@
         moments, we&apos;re here to help you find your next favorite book.
       </p>
     </div>
-    <img
+    <picture>
+      <source
+        type="image/webp"
+        srcset="
+          /img/article/article-descktop@1x.webp 1x,
+          /img/article/article-descktop@2x.webp 2x
+        "
+        media="(min-width: 1440px)"
+      />
+      <source
+        type="image/jpg"
+        srcset="
+          /img/article/article-descktop.jpg    1x,
+          /img/article/article-descktop@2x.jpg 2x
+        "
+        media="(min-width: 1440px)"
+      />
+      <source
+        type="image/webp"
+        srcset="
+          /img/article/article-tablet@1x.webp 1x,
+          /img/article/article-tablet@2x.webp 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        type="image/jpg"
+        srcset="
+          /img/article/article-tablet.jpg    1x,
+          /img/article/article-tablet@2x.jpg 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        type="image/webp"
+        srcset="
+          /img/article/article-mobile@1x.webp 1x,
+          /img/article/article-mobile@2x.webp 2x
+        "
+        media="(min-width: 320px)"
+      />
+      <source
+        type="image/jpg"
+        srcset="
+          /img/article/article-mobile.jpg    1x,
+          /img/article/article-mobile@2x.jpg 2x
+        "
+        media="(min-width: 320px)"
+      />
+      <img
+        class="article-image"
+        src="/img/article/article-descktop.jpg"
+        width="640"
+        height="474"
+        alt="bookstore interior"
+        loading="lazy"
+      />
+    </picture>
+    <!-- <img
       class="article-img"
       src="/img/article/article-bookstore-interior1x.jpg"
       srcset="
@@ -19,6 +77,6 @@
       "
       alt="bookstore interior"
       loading="lazy"
-    />
+    /> -->
   </div>
 </section>
