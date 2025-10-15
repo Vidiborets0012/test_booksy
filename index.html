@@ -247,7 +247,7 @@ summary {
     <script type="module" crossorigin src="/test_booksy/index.js"></script>
     <link rel="modulepreload" crossorigin href="/test_booksy/assets/vendor-CgFypB5O.js">
     <link rel="stylesheet" crossorigin href="/test_booksy/assets/vendor-CIMbuxn0.css">
-    <link rel="stylesheet" crossorigin href="/test_booksy/assets/index-jFyXHjbd.css">
+    <link rel="stylesheet" crossorigin href="/test_booksy/assets/index-Cy-PZyug.css">
   </head>
   <body>
     <header class="header">
@@ -339,11 +339,19 @@ summary {
 
 
     <main>
-      <section class="hero hero-section container">
-  <div class="hero-inner">
-    <div class="swiper hero-slider">
-      <ul class="swiper-wrapper hero-slider-wrapper">
-        <li class="swiper-slide">
+      <section class="hero hero-section">
+  <!-- убрать контейнер с секции и повесить на hero-inner -->
+  <div class="hero-inner container">
+    <!-- додати aria-live="polite" aria-roledescription="carousel" -->
+    <div
+      class="swiper hero-slider"
+      aria-live="polite"
+      aria-roledescription="carousel"
+    >
+      <!-- додати role="list" -->
+      <ul class="swiper-wrapper hero-slider-wrapper" role="list">
+        <!-- додати  role="group" aria-label="Slide 1 of 4"-->
+        <li class="swiper-slide" role="group" aria-label="Slide 1 of 4">
           <div class="swiper-slide-wrapper">
             <picture>
               <source
@@ -378,11 +386,11 @@ summary {
                 srcset="/test_booksy/assets/banner-mobile-1-DThFtQsp.jpg 1x, /test_booksy/assets/banner-mobile-1@2x-DP5_ueTD.jpg 2x"
                 media="(min-width: 320px)"
               />
-
+              <!-- замінити значення alt -->
               <img
                 class="hero-slider-img"
                 src="/test_booksy/assets/banner-desktop-1-D2SvF_7U.jpg"
-                alt="banner"
+                alt="Get 10% off your first order"
                 width="1312"
                 height="395"
                 loading="lazy"
@@ -393,11 +401,18 @@ summary {
                 Get 10% off <br />
                 your first order
               </p>
-              <a class="hero-slider-link" href="#books">Shop Now!</a>
+              <!-- додати aria-label="Go to the books section" -->
+              <a
+                class="hero-slider-link"
+                href="#books"
+                aria-label="Go to the books section"
+                >Shop Now!</a
+              >
             </div>
           </div>
         </li>
-        <li class="swiper-slide">
+        <!-- додати  role="group" aria-label="Slide 2 of 4"-->
+        <li class="swiper-slide" role="group" aria-label="Slide 2 of 4">
           <div class="swiper-slide-wrapper">
             <picture>
               <source
@@ -432,11 +447,11 @@ summary {
                 srcset="data:image/jpeg;base64,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 1x, /test_booksy/assets/banner-mobile-2@2x-36Hd9MlX.jpg 2x"
                 media="(min-width: 320px)"
               />
-
+              <!-- замінити значення alt -->
               <img
                 class="hero-slider-img"
                 src="/test_booksy/assets/banner-desktop-2-IthTxck0.jpg"
-                alt="banner"
+                alt="Save 15% on some books"
                 width="1312"
                 height="395"
                 loading="lazy"
@@ -447,11 +462,18 @@ summary {
                 Save 15% <br />
                 on some books
               </p>
-              <a class="hero-slider-link" href="#books">Shop Now!</a>
+              <!-- додати aria-label="Go to the books section" -->
+              <a
+                class="hero-slider-link"
+                href="#books"
+                aria-label="Go to the books section"
+                >Shop Now!</a
+              >
             </div>
           </div>
         </li>
-        <li class="swiper-slide">
+        <!-- додати  role="group" aria-label="Slide 3 of 4"-->
+        <li class="swiper-slide" role="group" aria-label="Slide 3 of 4">
           <div class="swiper-slide-wrapper">
             <picture>
               <source
@@ -486,11 +508,11 @@ summary {
                 srcset="/test_booksy/assets/banner-mobile-3-8uTxoIVs.jpg 1x, /test_booksy/assets/banner-mobile-3@2x-3OVipWpN.jpg 2x"
                 media="(min-width: 320px)"
               />
-
+              <!-- замінити значення alt -->
               <img
                 class="hero-slider-img"
                 src="/test_booksy/assets/banner-desktop-3-HRHfUr0I.jpg"
-                alt="banner"
+                alt="Summer Sale! Up to -40% discounts"
                 width="1312"
                 height="395"
                 loading="lazy"
@@ -501,11 +523,18 @@ summary {
                 Summer Sale! <br />
                 Up to -40% discounts
               </p>
-              <a class="hero-slider-link" href="#books">Shop Now!</a>
+              <!-- додати aria-label="Go to the books section" -->
+              <a
+                class="hero-slider-link"
+                href="#books"
+                aria-label="Go to the books section"
+                >Shop Now!</a
+              >
             </div>
           </div>
         </li>
-        <li class="swiper-slide">
+        <!-- додати  role="group" aria-label="Slide 4 of 4"-->
+        <li class="swiper-slide" role="group" aria-label="Slide 4 of 4">
           <div class="swiper-slide-wrapper">
             <picture>
               <source
@@ -540,11 +569,11 @@ summary {
                 srcset="/test_booksy/assets/banner-mobile-4-BPl57NbN.jpg 1x, /test_booksy/assets/banner-mobile-4@2x-DiIwHR1w.jpg 2x"
                 media="(min-width: 320px)"
               />
-
+              <!-- замінити значення alt -->
               <img
                 class="hero-slider-img"
                 src="/test_booksy/assets/banner-desktop-4-DRlw8fXH.jpg"
-                alt="banner"
+                alt="Last chance to buy our spring bestsellers"
                 width="1312"
                 height="395"
                 loading="lazy"
@@ -554,26 +583,51 @@ summary {
               <p class="hero-slider-text">
                 Last chance to buy our spring bestsellers
               </p>
-              <a class="hero-slider-link" href="#books">Shop Now!</a>
+              <!-- додати aria-label="Go to the books section" -->
+              <a
+                class="hero-slider-link"
+                href="#books"
+                aria-label="Go to the books section"
+                >Shop Now!</a
+              >
             </div>
           </div>
         </li>
       </ul>
 
-      <div class="hero-slider-buttons slider-buttons-box">
+      <div class="hero-footer">
+        <div class="hero-slider-buttons slider-buttons-box">
+          <div
+            class="slider-button hero-button-prev"
+            aria-label="previous slide"
+          >
+            <svg class="icon-arrow-left" width="14" height="14">
+              <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-left-arrow"></use>
+            </svg>
+          </div>
+          <div class="slider-button hero-button-next" aria-label="next slide">
+            <svg class="icon-arrow-right" width="14" height="14">
+              <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-right-arrow"></use>
+            </svg>
+          </div>
+        </div>
+        <h1 class="hero-title">Discover Your Next Great Read Today!</h1>
+      </div>
+
+      <!-- <div class="hero-slider-buttons slider-buttons-box">
         <div class="slider-button hero-button-prev" aria-label="previous slide">
           <svg class="icon-arrow-left" width="14" height="14">
-            <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-left-arrow"></use>
+            <use href="/img/sprite-opt.svg#icon-left-arrow"></use>
           </svg>
         </div>
         <div class="slider-button hero-button-next" aria-label="next slide">
           <svg class="icon-arrow-right" width="14" height="14">
-            <use href="/test_booksy/assets/sprite-opt-DX3HvpkN.svg#icon-right-arrow"></use>
+            <use href="/img/sprite-opt.svg#icon-right-arrow"></use>
           </svg>
         </div>
-      </div>
+      </div> -->
     </div>
-    <h1 class="hero-title">Discover Your Next Great Read Today!</h1>
+    <!-- <h1 class="hero-title">Discover Your Next Great Read Today!</h1> -->
   </div>
 </section>
 
