@@ -1,3 +1,4 @@
+/*
 document.addEventListener('DOMContentLoaded', () => {
   const section = document.querySelector('.location');
   const iframe = section.querySelector('iframe');
@@ -25,3 +26,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   observer.observe(section);
 });
+*/
