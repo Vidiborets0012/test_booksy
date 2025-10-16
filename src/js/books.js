@@ -28,14 +28,47 @@ function getInitialBooksLimit() {
   return window.innerWidth >= 1440 ? 24 : 10;
 }
 
+// function generateBooksHTML(books) {
+//   return books
+//     .map(
+//       book => `
+//     <li class="book-list-item">
+//         <img class="book-item-img" src="${book.book_image}" alt="${
+//         book.title
+//       }" />
+//         <div class="book-item-description">
+//           <div class="book-description-text">
+//             <div class="book-title-and-author">
+//               <h3 class="book-item-title">${
+//                 toTitleCase(book.title) || 'No Title'
+//               }</h3>
+//               <p class="book-item-author">${book.author || 'Unknown Author'}</p>
+//             </div>
+//             <p class="book-item-price">$${parseInt(book.price)}</p>
+//           </div>
+//           <button class="book-item-btn" type="button" data-book-id="${
+//             book._id
+//           }">Learn More</button>
+//         </div>
+//     </li>
+//   `
+//     )
+//     .join('');
+// }
 function generateBooksHTML(books) {
   return books
     .map(
       book => `
-    <li class="book-list-item">
-        <img class="book-item-img" src="${book.book_image}" alt="${
-        book.title
-      }" />
+      <li class="book-list-item">
+        <img
+          class="book-item-img"
+          src="${book.book_image}"
+          alt="${book.title}"
+          loading="lazy"
+          onload="this.classList.add('loaded')"
+          width="343"
+          height="488"
+        />
         <div class="book-item-description">
           <div class="book-description-text">
             <div class="book-title-and-author">
@@ -48,10 +81,11 @@ function generateBooksHTML(books) {
           </div>
           <button class="book-item-btn" type="button" data-book-id="${
             book._id
-          }">Learn More</button>
+          }">
+            Learn More
+          </button>
         </div>
-    </li>
-  `
+      </li>`
     )
     .join('');
 }
