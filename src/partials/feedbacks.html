@@ -6,18 +6,29 @@
         See what our readers are saying about us!
       </p>
     </div>
-    <div class="swiper swiper-div">
-      <ul class="swiper-wrapper ul-swiper-wrapper">
+    <!-- додати aria-live="polite" aria-roledescription="carousel" -->
+    <div
+      class="swiper swiper-div"
+      aria-live="polite"
+      aria-roledescription="carousel"
+    >
+      <!-- додати role="list" -->
+      <ul class="swiper-wrapper ul-swiper-wrapper" role="list">
         <!-- Slides -->
         <!-- 1   -->
-        <li class="swiper-slide feedbacks-item">
+        <!-- додати  role="group" aria-label="Slide 1 of 6"-->
+        <li
+          class="swiper-slide feedbacks-item"
+          role="group"
+          aria-label="Slide 1 of 6"
+        >
           <div class="container-comments">
             <p class="feedbacks-comments">
               Great selection, fast delivery, and beautifully packaged books. My
               go-to store for weekend reads!
             </p>
             <div class="user-info">
-              <img
+              <!-- <img
                 class="feedbacks-comments-img"
                 src="./img/feedbacks/face1_men.jpg"
                 alt="face"
@@ -26,6 +37,18 @@
                   /img/feedbacks/face1_men_2х.jpg 2x
                 "
                 loading="lazy"
+              /> -->
+              <img
+                class="feedbacks-comments-img"
+                src="/img/feedbacks/feedback-1.jpg"
+                srcset="
+                  /img/feedbacks/feedback-1.jpg    1x,
+                  /img/feedbacks/feedback-1@2x.jpg 2x
+                "
+                alt="Client's face"
+                loading="lazy"
+                width="48"
+                height="48"
               />
               <div class="user-details">
                 <h4 class="feedbacks-comments-name">Ethan Brooks</h4>
@@ -35,13 +58,18 @@
           </div>
         </li>
         <!-- 2   -->
-        <li class="swiper-slide feedbacks-item">
+        <!-- додати  role="group" aria-label="Slide 2 of 6"-->
+        <li
+          class="swiper-slide feedbacks-item"
+          role="group"
+          aria-label="Slide 2 of 6"
+        >
           <p class="feedbacks-comments">
             Always a pleasure ordering here! The books arrive quickly and are
             always in perfect condition. A reader&apos;s dream!
           </p>
           <div class="user-info">
-            <img
+            <!-- <img
               class="feedbacks-comments-img"
               src="/img/feedbacks/face2_men.jpg"
               alt="face"
@@ -50,6 +78,18 @@
                 /img/feedbacks/face2_men_2х.jpg 2x
               "
               loading="lazy"
+            /> -->
+            <img
+              class="feedbacks-comments-img"
+              src="/img/feedbacks/feedback-2.jpg"
+              srcset="
+                /img/feedbacks/feedback-2.jpg    1x,
+                /img/feedbacks/feedback-2@2x.jpg 2x
+              "
+              alt="Client's face"
+              loading="lazy"
+              width="48"
+              height="48"
             />
             <div class="user-details">
               <h4 class="feedbacks-comments-name">Benjamin Scott</h4>
@@ -58,14 +98,19 @@
           </div>
         </li>
         <!-- 3   -->
-        <li class="swiper-slide feedbacks-item">
+        <!-- додати  role="group" aria-label="Slide 3 of 6"-->
+        <li
+          class="swiper-slide feedbacks-item"
+          role="group"
+          aria-label="Slide 3 of 6"
+        >
           <div class="container-comments">
             <p class="feedbacks-comments">
               Excellent service and amazing collection. I always find something
               new and exciting to read. Highly recommended!
             </p>
             <div class="user-info">
-              <img
+              <!-- <img
                 class="feedbacks-comments-img"
                 src="/img/feedbacks/face3_men.jpg"
                 alt="face"
@@ -74,6 +119,18 @@
                   /img/feedbacks/face3_men_2х.jpg 2x
                 "
                 loading="lazy"
+              /> -->
+              <img
+                class="feedbacks-comments-img"
+                src="/img/feedbacks/feedback-3.jpg"
+                srcset="
+                  /img/feedbacks/feedback-3.jpg    1x,
+                  /img/feedbacks/feedback-3@2x.jpg 2x
+                "
+                alt="Client's face"
+                loading="lazy"
+                width="48"
+                height="48"
               />
               <div class="user-details">
                 <h4 class="feedbacks-comments-name">Lucas Reed</h4>
@@ -83,14 +140,19 @@
           </div>
         </li>
         <!-- 4   -->
-        <li class="swiper-slide feedbacks-item">
+        <!-- додати  role="group" aria-label="Slide 4 of 6"-->
+        <li
+          class="swiper-slide feedbacks-item"
+          role="group"
+          aria-label="Slide 4 of 6"
+        >
           <div class="container-comments">
             <p class="feedbacks-comments">
               Fantastic store! The packaging is so thoughtful, and every order
               feels like opening a gift.
             </p>
             <div class="user-info">
-              <img
+              <!-- <img
                 class="feedbacks-comments-img"
                 src="./img/feedbacks/face4_wome.jpg"
                 alt="face"
@@ -99,6 +161,18 @@
                   /img/feedbacks/face4_wome_2х.jpg 2x
                 "
                 loading="lazy"
+              /> -->
+              <img
+                class="feedbacks-comments-img"
+                src="/img/feedbacks/feedback-4.jpg"
+                srcset="
+                  /img/feedbacks/feedback-4.jpg    1x,
+                  /img/feedbacks/feedback-4@2x.jpg 2x
+                "
+                alt="Client's face"
+                loading="lazy"
+                width="48"
+                height="48"
               />
               <div class="user-details">
                 <h4 class="feedbacks-comments-name">Jane Doe</h4>
@@ -108,14 +182,19 @@
           </div>
         </li>
         <!-- 5   -->
-        <li class="swiper-slide feedbacks-item">
+        <!-- додати  role="group" aria-label="Slide 5 of 6"-->
+        <li
+          class="swiper-slide feedbacks-item"
+          role="group"
+          aria-label="Slide 5 of 6"
+        >
           <div class="container-comments">
             <p class="feedbacks-comments">
               Love this bookstore! Great prices, fast shipping, and the books
               always look brand new.
             </p>
             <div class="user-info">
-              <img
+              <!-- <img
                 class="feedbacks-comments-img"
                 src="/img/feedbacks/face5_men.jpg"
                 alt="face"
@@ -124,6 +203,18 @@
                   /img/feedbacks/face5_men_2х.jpg 2x
                 "
                 loading="lazy"
+              /> -->
+              <img
+                class="feedbacks-comments-img"
+                src="/img/feedbacks/feedback-5.jpg"
+                srcset="
+                  /img/feedbacks/feedback-5.jpg    1x,
+                  /img/feedbacks/feedback-5@2x.jpg 2x
+                "
+                alt="Client's face"
+                loading="lazy"
+                width="48"
+                height="48"
               />
               <div class="user-details">
                 <h4 class="feedbacks-comments-name">Daniel Carter</h4>
@@ -133,14 +224,19 @@
           </div>
         </li>
         <!--6   -->
-        <li class="swiper-slide feedbacks-item">
+        <!-- додати  role="group" aria-label="Slide 6 of 6"-->
+        <li
+          class="swiper-slide feedbacks-item"
+          role="group"
+          aria-label="Slide 6 of 6"
+        >
           <div class="container-comments">
             <p class="feedbacks-comments">
               Impressive quality and care. My orders arrive on time and
               beautifully packed every single time.
             </p>
             <div class="user-info">
-              <img
+              <!-- <img
                 class="feedbacks-comments-img"
                 src="/img/feedbacks/face6_wome.jpg"
                 alt="face"
@@ -149,6 +245,18 @@
                   /img/feedbacks/face6_wome_2х.jpg 2x
                 "
                 loading="lazy"
+              /> -->
+              <img
+                class="feedbacks-comments-img"
+                src="/img/feedbacks/feedback-6.jpg"
+                srcset="
+                  /img/feedbacks/feedback-6.jpg    1x,
+                  /img/feedbacks/feedback-6@2x.jpg 2x
+                "
+                alt="Client's face"
+                loading="lazy"
+                width="48"
+                height="48"
               />
               <div class="user-details">
                 <h4 class="feedbacks-comments-name">Emily Johnson</h4>

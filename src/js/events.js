@@ -56,3 +56,24 @@ eventList.addEventListener('click', event => {
 
   openBtnContactModal(eventTitle);
 });
+
+const prevButton = document.querySelector('.hero-button-prev');
+const nextButton = document.querySelector('.hero-button-next');
+
+function handleButtonClick(button) {
+  if (button) {
+    window.requestAnimationFrame(() => button.blur());
+  }
+}
+
+if (prevButton) {
+  prevButton.addEventListener('click', function () {
+    handleButtonClick(this);
+  });
+}
+
+if (nextButton) {
+  nextButton.addEventListener('click', function () {
+    handleButtonClick(this);
+  });
+}
