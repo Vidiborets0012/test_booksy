@@ -2,7 +2,7 @@
   display: none !important;
 }
 
-.books-container {
+.books-section {
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -126,11 +126,6 @@
   background-color: rgba(11, 5, 0, 0.05);
 }
 
-
-
-
-
-
 .books-list {
   display: flex;
   flex-direction: column;
@@ -225,7 +220,7 @@
 }
 
 .book-item-btn:active {
-  background-color: #dad9d8;;
+  background-color: #dad9d8;
 }
 
 .book-item-btn:focus:not(:active):not(:hover) {
@@ -312,7 +307,7 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .books-container {
+  .books-content {
     display: flex;
     gap: 24px;
   }
