@@ -228,4 +228,15 @@ booksList.addEventListener('click', async e => {
   openBookModal();
 });
 
-loadCategories().then(() => loadBooks('all'));
+// loadCategories().then(() => loadBooks('all'));
+
+async function initBooks() {
+  try {
+    // 🚀 Паралельне завантаження без ланцюга критичних запитів
+    await Promise.all([loadCategories(), loadBooks('all')]);
+  } catch (error) {
+    console.error('Initialization error:', error);
+  }
+}
+
+initBooks();
