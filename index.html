@@ -647,13 +647,47 @@
     <div class="swiper events-swiper">
       <ul class="swiper-wrapper events-list">
         <li class="swiper-slide event-item">
-          <img
+          <!-- <img
             class="events-image"
             src="/img/events/img-1x.jpg.jpg"
-            srcset="/test_booksy/assets/img-1.jpg-B_GHZWQh.jpg 1x, /test_booksy/assets/img-1.jpg@2x-DXTXQxN5.jpg 2x"
+            srcset="
+              /img/events/img-1.jpg.jpg    1x,
+              /img/events/img-1.jpg@2x.jpg 2x
+            "
             alt="Cozy Book Club — The Midnight Library"
             loading="lazy"
-          />
+          /> -->
+          <picture>
+            <source
+              type="image/webp"
+              srcset="data:image/webp;base64,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 1x, /test_booksy/assets/events-descktop-1@2x-DhtiQ2Bl.webp 2x"
+              media="(min-width: 1440px)"
+            />
+            <source
+              type="image/jpg"
+              srcset="/img/events/events-desktop-1.jpg 1x, /img/events/events-desktop-1@2x.jpg 2x"
+              media="(min-width: 1440px)"
+            />
+
+            <source
+              type="image/webp"
+              srcset="data:image/webp;base64,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 1x, /test_booksy/assets/events-mobile-1@2x-Bj5Wgxmk.webp 2x"
+              media="(min-width: 320px)"
+            />
+            <source
+              type="image/jpg"
+              srcset="/test_booksy/assets/events-mobile-1-DzObWAzN.jpg 1x, /test_booksy/assets/events-mobile-1@2x-D0mgCthQ.jpg 2x"
+              media="(min-width: 320px)"
+            />
+            <img
+              class="events-image"
+              src="/img/events/events-desktop-1.jpg"
+              alt="Cozy Book Club — The Midnight Library"
+              width="422"
+              height="278"
+              loading="lazy"
+            />
+          </picture>
 
           <div class="event-info-wrapper">
             <div class="events-info">
@@ -676,13 +710,47 @@
         </li>
 
         <li class="swiper-slide event-item">
-          <img
+          <!-- <img
             class="events-image"
             src="/img/events/img-2.jpg"
-            srcset="/test_booksy/assets/img-2.jpg-Bl09eX5W.jpg 1x, /test_booksy/assets/img-2.jpg@2x-B8fZUeng.jpg 2x"
+            srcset="
+              /img/events/img-2.jpg.jpg    1x,
+              /img/events/img-2.jpg@2x.jpg 2x
+            "
             alt="Book Cover Design Workshop"
             loading="lazy"
-          />
+          /> -->
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/test_booksy/assets/events-descktop-2@1x-BjMj8wnG.webp 1x, /test_booksy/assets/events-descktop-2@2x-B0TuYiaU.webp 2x"
+              media="(min-width: 1440px)"
+            />
+            <source
+              type="image/jpg"
+              srcset="/test_booksy/assets/events-descktop-2-Dv5pvtvy.jpg 1x, /test_booksy/assets/events-descktop-2@2x-D0MeyMfQ.jpg 2x"
+              media="(min-width: 1440px)"
+            />
+
+            <source
+              type="image/webp"
+              srcset="/test_booksy/assets/events-mobile-2@1x-CsIbfWb9.webp 1x, /test_booksy/assets/events-mobile-2@2x-BWvUFkdX.webp 2x"
+              media="(min-width: 320px)"
+            />
+            <source
+              type="image/jpg"
+              srcset="/test_booksy/assets/events-mobile-2-Do-mgwaS.jpg 1x, /test_booksy/assets/events-mobile-2@2x-Bgq2322P.jpg 2x"
+              media="(min-width: 320px)"
+            />
+            <img
+              class="events-image"
+              src="/img/events/events-desktop-2.jpg"
+              alt="Book Cover Design Workshop"
+              width="422"
+              height="278"
+              loading="lazy"
+            />
+          </picture>
 
           <div class="event-info-wrapper">
             <div class="events-info">
@@ -703,13 +771,47 @@
         </li>
 
         <li class="swiper-slide event-item">
-          <img
+          <!-- <img
             class="events-image"
             src="/img/events/img-3.jpg"
-            srcset="/test_booksy/assets/img-3.jpg-a5-djZdm.jpg 1x, /test_booksy/assets/img-3.jpg@2x-rF0pK-aR.jpg 2x"
+            srcset="
+              /img/events/img-3.jpg.jpg    1x,
+              /img/events/img-3.jpg@2x.jpg 2x
+            "
             alt="Children's Story Hour"
             loading="lazy"
-          />
+          /> -->
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/test_booksy/assets/events-descktop-3@1x-C2kzuCmI.webp 1x, /test_booksy/assets/events-descktop-3@2x-DURse5S9.webp 2x"
+              media="(min-width: 1440px)"
+            />
+            <source
+              type="image/jpg"
+              srcset="/test_booksy/assets/events-descktop-3-CvqyK9M2.jpg 1x, /test_booksy/assets/events-descktop-3@2x-D5n7zLKc.jpg 2x"
+              media="(min-width: 1440px)"
+            />
+
+            <source
+              type="image/webp"
+              srcset="/test_booksy/assets/events-mobile-3@1x-BBcqqNtw.webp 1x, /img/events/events-mobile-3@2x.webp 2x"
+              media="(min-width: 320px)"
+            />
+            <source
+              type="image/jpg"
+              srcset="/test_booksy/assets/events-mobile-3-BvOo-X2j.jpg 1x, /img/events/events-mobile-3@2x.jpg 2x"
+              media="(min-width: 320px)"
+            />
+            <img
+              class="events-image"
+              src="/img/events/events-desktop-3.jpg"
+              alt="Children's Story Hour"
+              width="422"
+              height="278"
+              loading="lazy"
+            />
+          </picture>
 
           <div class="event-info-wrapper">
             <div class="events-info">
