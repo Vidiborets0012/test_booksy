@@ -22,9 +22,11 @@
   /* margin-bottom: 32px; */
 }
 
+/* додати  */
 .article-image {
   border-radius: 16px;
   width: 100%;
+  aspect-ratio: 640 /474;
 }
 
 /* .article-img {
