@@ -63,8 +63,7 @@
     max-width: 640px;
   }
 
-  .article-image {
-    width: auto;
-    height: 474px;
+  .article-picture {
+    width: 100%;
   }
 }
