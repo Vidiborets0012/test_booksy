@@ -23,9 +23,10 @@
   background-color: #ea8d50;
   border-radius: 8px;
 }
-
+/* додати  aspect-ratio: 1312 / 395;*/
 .hero-slider-img {
   border-radius: 8px;
+  aspect-ratio: 1312 / 395;
 }
 
 .hero-slider-content {
